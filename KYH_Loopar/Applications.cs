@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Diagnostics.SymbolStore;
 using System.Linq;
+using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +15,39 @@ namespace KYH_Loopar
     {
         public void Run()
         {
+            //            Skriv en loop som matar in värden(temperatur)
+
+            //Om medelvärdet av sista tre > 25 så skriv ut ”Alarm”
+
+            //a.lös detta med hjälp av tre rullande tre variabler
+            //     int senaste, int nästsenaste, int tidigaste
+            //b.lös med lista istället(alla lagras i lista, räkna på tre sista)
+
+
+            bool run = true;
+
+            
+
+            while (run)
+            {
+                int temp = 0;
+                int senaste = 0;
+                int nästSenaste = 0;
+                int tidigaste = 0;
+
+
+                Console.WriteLine("Ange temperaturen");
+                temp = int.Parse(Console.ReadLine());
+
+                temp = tidigaste;
+                tidigaste = nästSenaste;
+                nästSenaste = senaste;
+            }
+
+
+
+
+
             //            Skapa ett program där användaren får mata in ett tal.
             //            Låt sedan programmet skriva ut alla siffor som är mindre än det inmatade talet
             //            men större än 0.
@@ -31,18 +66,16 @@ namespace KYH_Loopar
             //}
 
 
-            Console.WriteLine("Mata in ett tal");
-            int num = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Mata in ett tal");
+            //int counter = int.Parse(Console.ReadLine());
 
-            while (num > 0)
-            {
-                Console.WriteLine(num--);
+            //int num = 1;
+            //while (counter > 0)
+            //{
+            //    Console.WriteLine(num++);
 
-                
-            }
-
-
-
+            //    counter --;
+            //}
 
 
             //            Be användaren mata in ett tal.
@@ -86,11 +119,6 @@ namespace KYH_Loopar
             //}
 
             //Console.WriteLine(sum);
-
-
-
-
-
 
             //a.Får mata in två tal.
             //b.Skriv sedan till skärmen summan av de två talen.
